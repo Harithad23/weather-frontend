@@ -1,3 +1,28 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for Weather Forecast App
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Protect API endpoints and private routes
+Disallow: /api/
+Disallow: /private/
+Disallow: /admin/
+
+# Allow access to important pages
+Allow: /about
+Allow: /contact
+Allow: /terms
+Allow: /privacy
+
+# Sitemap
+Sitemap: https://yourweatherapp.com/sitemap.xml
+
+# Rate limiting
+Crawl-delay: 5
+
+# Additional rules for specific bots
+User-agent: Googlebot
+Crawl-delay: 2
+
+User-agent: Bingbot
+Crawl-delay: 2
